@@ -80,6 +80,7 @@
 </svelte:head>
 
 <h1>Do you want to book a spot at the office?</h1>
+
 <span>
   total spots: {maxBookings} - open spots = {maxBookings - bookings.length}
 </span>
