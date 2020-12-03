@@ -1,33 +1,3 @@
-<style>
-  h1,
-  figure,
-  p {
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  h1 {
-    font-size: 2.8em;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 0 0 0.5em 0;
-  }
-
-  figure {
-    margin: 0 0 1em 0;
-  }
-
-  p {
-    margin: 1em auto;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      font-size: 4em;
-    }
-  }
-</style>
-
 <script lang="ts">
   const maxBookings = 20;
   type User = {
@@ -79,7 +49,7 @@
   <title>Sapper project template</title>
 </svelte:head>
 
-<h1>Do you want to book a spot at the office?</h1>
+<h1 class="text-blue-500">Lets get started!</h1>
 
 <span>
   total spots: {maxBookings} - open spots = {maxBookings - bookings.length}

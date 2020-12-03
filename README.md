@@ -152,7 +152,7 @@ npm install -D @sveltejs/svelte-virtual-list
 Sapper is in early development, and may have the odd rough edge here and there. Please be vocal over on the [Sapper issue tracker](https://github.com/sveltejs/sapper/issues).
 
 
-## Setup tailwind
+## Tailwind setup
 
 Tailwind is setup by following the following guide: https://dev.to/vannsl/configuring-tailwindcss-for-sapper-58jm. If there are any problems, please checkout the link and see if everything is still setup correctly. 
 

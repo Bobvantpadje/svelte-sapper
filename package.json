@@ -3,7 +3,7 @@
   "description": "TODO",
   "version": "0.0.1",
   "scripts": {
-    "dev": "sapper dev",
+    "dev": "npm run dev:tailwindcss & sapper dev",
     "dev:tailwindcss": "postcss static/tailwind.css -o static/main.css -w",
     "build": "npm run build:tailwindcss && sapper build --legacy",
     "build:tailwindcss": "NODE_ENV=production postcss static/tailwind.css -o static/main.css",
