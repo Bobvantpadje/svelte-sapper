@@ -1,5 +1,6 @@
 <script lang="ts">
   import GoogleAuth from "../components/GoogleAuth.svelte";
+  import { goto } from "@sapper/app";
 </script>
 
 <div class="w-full min-h-screen flex bg-purple-900 justify-center">
@@ -10,12 +11,12 @@
       rounded-lg max-w-sm"
     >
       <img src="logo-black-text.e1c73a1.svg" alt="logo" />
-      <span class="mt-4 font-bold">Welcome to passionate people</span>
-      <span class="mt-2">Please login using your google account!</span>
-      <div class="mt-2">
+      <span class="mt-6 font-bold">Welcome to passionate people</span>
+      <span class="mt-4">Please login using your google account!</span>
+      <div class="mt-4">
         <GoogleAuth
-          onSuccess="{(e) => {
-            console.log(e);
+          onSuccess="{() => {
+            goto('/');
           }}"
         />
       </div>
