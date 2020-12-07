@@ -1,12 +1,5 @@
 <script lang="ts">
-  import { GoogleAuth } from "@beyonk/svelte-social-auth";
-  import Index from "./index.svelte";
-
-  const YOUR_CLIENT_ID =
-    "406460855468-59gcn6gkbruheij8gnosc6845lsil0a6.apps.googleusercontent.com";
-  const YOUR_CLIENT_SECRET = "2D3V32nz3k4wBLMWxnvUSfDN";
-  const YOUR_REDIRECT_URL = "http://localhost:3000";
-  let email: string = "";
+  import GoogleAuth from "../components/GoogleAuth.svelte";
 </script>
 
 <div class="w-full min-h-screen flex bg-purple-900 justify-center">
@@ -17,14 +10,15 @@
       rounded-lg max-w-sm"
     >
       <img src="logo-black-text.e1c73a1.svg" alt="logo" />
-      <h1>Welcome to passionate people</h1>
-      <h2>Please log in!</h2>
-      <input bind:value="{email}" placeholder="enter email" />
-      <button class="bg-red-400">login</button>
-      <GoogleAuth
-        clientId="406460855468-59gcn6gkbruheij8gnosc6845lsil0a6.apps.googleusercontent.com"
-        on:auth-success="{(e) => console.dir(e.detail.user)}"
-      />
+      <span class="mt-4 font-bold">Welcome to passionate people</span>
+      <span class="mt-2">Please login using your google account!</span>
+      <div class="mt-2">
+        <GoogleAuth
+          onSuccess="{(e) => {
+            console.log(e);
+          }}"
+        />
+      </div>
     </div>
   </div>
 </div>
